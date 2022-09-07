@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+:root {
+  --app-theme-color: #ffffff;
+  --text-color: #5e5e5e;
+  --para-color: #414141;
+  --project-card-color: #212121;
+  --project-card-hover-color: #8b8b8b;
+  --footer-color: #212121;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-container {
+  width: 100vw;
+  background-color: var(--app-theme-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  padding: 0 5em;
+}
+
+.header-app-name-container,
+.header-option-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-app-name-container {
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-option-container {
+  padding: 1em;
+}
+
+.header-option {
+  text-transform: capitalize;
+}
+
+.link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* body */
+.body-container {
+  padding: 2em;
+}
+
+.intro-section-container {
+  text-align: center;
+  padding: .5em;
+  width: 60%;
+  margin: auto;
+}
+
+.intro-heading {
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+.intro-paragraph {
+  color: var(--para-color);
+  margin-top: 1em;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* project section */
+.section-project-container {
+  padding: 5em;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.divider {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.project-card-container {
+  width: 20em;
+  height: 20em;
+  border-radius: .5em;
+  background-color: var(--project-card-color);
+}
+
+.project-card-container:hover {
+  cursor: pointer;
+  box-shadow: .5em .5em 1em var(--project-card-hover-color);
+}
+
+/* skills section */
+.section-skills-container {
+  justify-content: space-around;
+  padding: 5em;
+}
+
+/* footer */
+.footer-container {
+  color: #ffffff;
+  background-color: var(--footer-color);
+  width: 100vw;
+  height: 5em;
 }
