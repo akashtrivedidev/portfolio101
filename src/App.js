@@ -2,13 +2,13 @@ import React from "react"
 import Header from "./components/Header"
 import Body from "./components/Body"
 import Footer from "./components/Footer"
-import { getUserData } from "./api/getUserData"
+// import { getUserData } from "./api/getUserData"
 import "./App.css"
 
 function App() {
-  const [user, setUser] = React.useState({
+  // const [user, setUser] = React.useState({
 
-  })
+  // })
   // React.useEffect(() => {
   //   getUserData()
   //     .then((res) => {
