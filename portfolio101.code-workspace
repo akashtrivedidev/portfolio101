@@ -14,6 +14,7 @@
 		"editor.lineHeight": 1.8,
 		"editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.formatOnSave": true,
+		"editor.glyphMargin": false,
 
 		"terminal.integrated.fontFamily": "Hack",
 		"terminal.integrated.fontSize": 16,

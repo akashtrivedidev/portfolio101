@@ -9,13 +9,15 @@ const Header = () => {
         <div className='header-app-name-container'>
           <div className='header-app-name'>{username}</div>
         </div>
-        {
-          options.map((option, index) => (
-            <div className='header-option-container' key={index}>
-              <a href={`/#${option}`} className='header-option link'>{option}</a>
-            </div>
-          ))
-        }
+        <div className='header-option-container'>
+          {
+            options.map((option, index) => (
+              <div className='header-option'>
+                <a href={`/#${option}`} key={index} className='link'>{option}</a>
+              </div>
+            ))
+          }
+        </div>
       </header>
     </div>
   );
