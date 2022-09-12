@@ -9,7 +9,7 @@ const Footer = () => {
     <div className='footer-container'>
       <footer className='footer' id='contact'>
         <div className="email-container"><div className="email">{handle_email}</div></div>
-        <div className="footer-flag"><img src={flag_icon_corner} className='flag' /></div>
+        <div className="footer-flag"><img src={flag_icon_corner} className='flag' alt='indian flag' /></div>
       </footer>
     </div>
   )

@@ -10,7 +10,7 @@ const Header = (props) => {
   return (
     <div className='header-container'>
       <header className='header'>
-        <div className='header-icon-container'><img src={avatar} className='avatar' /></div>
+        <div className='header-icon-container'><img src={avatar} className='avatar' alt='avatar' /></div>
         <div className='header-app-name-container'><div className='header-app-name'>{username}</div></div>
         <div className='header-option-container'>
           <div className='header-option'>
@@ -20,7 +20,7 @@ const Header = (props) => {
               ))
             }
           </div>
-          <div className="header-flag"><img src={flag_icon_rounded} className='flag' /></div>
+          <div className="header-flag"><img src={flag_icon_rounded} className='flag' alt='indian flag' /></div>
         </div>
       </header>
     </div>
