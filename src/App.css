@@ -5,6 +5,7 @@
   --project-card-color: #212121;
   --project-card-hover-color: #8b8b8b;
   --footer-color: #212121;
+  --footer-message-color: #ffffff;
 }
 
 * {
@@ -13,23 +14,20 @@
   box-sizing: border-box;
 }
 
+.header-link {
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 0 .5em;
+}
+
 .header-container {
-  width: 100vw;
   background-color: var(--app-theme-color);
 }
 
 .header {
   display: flex;
-  width: 90%;
-  margin: auto;
-  padding: 0 5em;
-}
-
-.header-app-name-container,
-.header-option {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 0 7em;
 }
 
 .header-app-name-container {
@@ -38,19 +36,24 @@
 
 .header-app-name {
   text-transform: capitalize;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
-.header-option-container {
-  padding: 1em;
+.header-option-container,
+.header-app-name-container {
+  padding: 1em 0em;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.link {
-  padding: 0 .5em;
-  text-transform: capitalize;
-  color: var(--text-color);
-  text-decoration: none;
+.header-flag {
+  display: none;
+}
+
+.flag {
+  height: 3em;
+  width: 3em;
 }
 
 /* body */
@@ -65,54 +68,30 @@
   margin: auto;
 }
 
-.intro-heading {
+.heading {
+  font-weight: 400;
   text-transform: capitalize;
-  font-weight: 900;
+  margin-bottom: .2em;
 }
 
 .intro-paragraph {
   color: var(--para-color);
-  margin-top: 1em;
   font-size: 1.05rem;
   line-height: 1.5;
 }
 
-@media screen and (max-width:720px) {
-  .header {
-    padding: 0 1em;
-  }
-
-  .body-container {
-    padding: 0em;
-  }
-
-  .intro-section-container {
-    padding: .5em;
-    width: 90%;
-  }
-
-  .intro-paragraph {
-    margin-top: .5em;
-    line-height: 1;
-  }
-}
-
 /* project section */
 .section-container {
-  padding: 5em;
+  padding: 2em 5em;
 }
 
-.divider {
-  margin-top: .5em;
-  margin-bottom: 1.5em;
-}
-
-.cb-projects-container {
+.slider-container {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
+  margin: 1em 0em;
   overflow: auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .project-card-container {
@@ -128,35 +107,123 @@
   box-shadow: .5em .5em 1em var(--project-card-hover-color);
 }
 
-@media screen and (max-width:720px) {
-  .section-container {
-    padding: 1.5em;
-  }
-
-  .divider {
-    margin-top: .5em;
-    margin-bottom: 1em;
-  }
-
-  .cb-projects-container {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    overflow: auto;
-    justify-content: space-between;
-  }
-}
-
 /* skills section */
 .section-skills-container {
   justify-content: space-around;
   padding: 5em;
 }
 
+.skills-container {
+  margin: 1em 0em;
+  display: flex;
+}
+
+.skill-container {
+  width: 15em;
+  margin: 0 1em;
+}
+
+.skill-heading {
+  color: var(--footer-color);
+  text-transform: capitalize;
+}
+
+.skill-list {
+  padding: 1em 1.5em;
+}
+
+.skill {
+  color: var(--footer-color);
+  line-height: 2;
+  text-transform: capitalize;
+}
+
 /* footer */
 .footer-container {
   color: #ffffff;
   background-color: var(--footer-color);
-  width: 100vw;
-  height: 5em;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  padding: 2em 7em;
+}
+
+.email-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--footer-message-color);
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width:720px) {
+  .header {
+    padding: 0 1em;
+  }
+
+  .header-option {
+    display: none;
+  }
+
+  .header-flag {
+    display: block;
+  }
+
+  .body-container {
+    padding: 0em;
+  }
+
+  .intro-section-container {
+    padding: 1em .5em;
+    width: 100%;
+  }
+
+  .intro-paragraph {
+    margin-top: .5em;
+    line-height: 1;
+  }
+
+  .section-container {
+    padding: 1em;
+  }
+
+  .slider-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: auto;
+    justify-content: space-between;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+
+  .skill-container {
+    min-width: 10em;
+    margin-left: .5em;
+  }
+
+  .skill-list {
+    padding: 1em;
+  }
+
+  .footer {
+    padding: 1em;
+  }
+
+  .email-container {
+    font-size: 14px;
+  }
+
+  .footer-flag {
+    display: none;
+  }
 }
