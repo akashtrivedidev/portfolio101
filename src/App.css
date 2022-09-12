@@ -2,8 +2,9 @@
   --app-theme-color: #ffffff;
   --text-color: #5e5e5e;
   --para-color: #414141;
-  --project-card-color: #212121;
+  --project-card-color: #f0f7f7;
   --project-card-hover-color: #8b8b8b;
+  --project-about-color: #474747;
   --footer-color: #212121;
   --footer-message-color: #ffffff;
 }
@@ -28,6 +29,19 @@
 .header {
   display: flex;
   padding: 0 7em;
+}
+
+.header-icon-container {
+  display: flex;
+  margin-right: .5em;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avatar {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
 }
 
 .header-app-name-container {
@@ -90,14 +104,14 @@
   flex-wrap: nowrap;
   width: 100%;
   margin: 1em 0em;
+  padding-bottom: .5em;
   overflow: auto;
   justify-content: space-evenly;
 }
 
 .project-card-container {
   flex: 0 0 auto;
-  width: 20em;
-  height: 20em;
+  width: 22em;
   border-radius: .5em;
   background-color: var(--project-card-color);
 }
@@ -107,6 +121,31 @@
   box-shadow: .5em .5em 1em var(--project-card-hover-color);
 }
 
+.project-thumbnail {
+  border-radius: .5em .5em 0 0;
+  width: 100%;
+  height: 13em;
+}
+
+.project-name {
+  color: var(--footer-color);
+  margin-bottom: .2em;
+}
+
+.projection-about-container {
+  color: var(--project-about-color);
+  word-spacing: 5px;
+  max-height: 25em;
+  padding: 1em;
+  padding-bottom: 1.5em;
+}
+
+.project-description {
+  margin-top: .5em;
+  width: 100%;
+  height: 11em;
+}
+
 /* skills section */
 .section-skills-container {
   justify-content: space-around;
@@ -114,12 +153,15 @@
 }
 
 .skills-container {
-  margin: 1em 0em;
   display: flex;
+  overflow: auto;
+  flex-wrap: nowrap;
+  margin: 1em 0em;
 }
 
 .skill-container {
   width: 15em;
+  padding-bottom: .5em;
   margin: 0 1em;
 }
 
@@ -140,9 +182,13 @@
 
 /* footer */
 .footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #ffffff;
   background-color: var(--footer-color);
   width: 100%;
+  min-height: 20vh;
 }
 
 .footer {
@@ -166,6 +212,16 @@
     padding: 0 1em;
   }
 
+  .avatar {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+  }
+
+  .header-app-name {
+    font-size: 1.8rem;
+  }
+
   .header-option {
     display: none;
   }
@@ -174,12 +230,17 @@
     display: block;
   }
 
+  .flag {
+    height: 2.5em;
+    width: 2.5em;
+  }
+
   .body-container {
     padding: 0em;
   }
 
   .intro-section-container {
-    padding: 1em .5em;
+    padding: 1em;
     width: 100%;
   }
 
@@ -200,19 +261,28 @@
     justify-content: space-between;
   }
 
-  .skills-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: auto;
+  .project-card-container {
+    margin-right: .5em;
+    width: 17em;
+    max-height: 25em;
+  }
+
+  .project-thumbnail {
+    width: 100%;
+    height: 11em;
+  }
+
+  .project-description {
+    font-size: .9rem;
+    overflow-y: scroll;
+    width: 100%;
+    height: 11em;
+    text-align: justify;
   }
 
   .skill-container {
     min-width: 10em;
-    margin-left: .5em;
-  }
-
-  .skill-list {
-    padding: 1em;
+    margin-left: 0em;
   }
 
   .footer {

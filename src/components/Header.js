@@ -2,19 +2,21 @@ import React from 'react';
 
 const flag_icon_rounded = 'https://cdn-icons-png.flaticon.com/512/330/330439.png'
 
-const Header = () => {
+const Header = (props) => {
+  const { avatar } = props
   const username = 'akash trivedi';
   const options = ['projects', 'skills', 'contact', 'open source']
 
   return (
     <div className='header-container'>
       <header className='header'>
+        <div className='header-icon-container'><img src={avatar} className='avatar' /></div>
         <div className='header-app-name-container'><div className='header-app-name'>{username}</div></div>
         <div className='header-option-container'>
           <div className='header-option'>
             {
               options.map((option, index) => (
-                <a className='header-link' href={`/#${option}`} key={index}>{option}</a>
+                <a className='header-link' href={`/#${option}`}>{option}</a>
               ))
             }
           </div>
