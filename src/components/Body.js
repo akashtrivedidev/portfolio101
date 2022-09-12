@@ -1,7 +1,8 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 
-const Body = () => {
+const Body = (props) => {
+  const { projects } = props
   const intro_heading = 'myself'
   const intro_paragraph = 'I am a full stack Web Application Developer. Currently i am working on personal projects and actively looking for amazing job opportunites.'
   const skills = {
@@ -10,24 +11,6 @@ const Body = () => {
     'libraries': ['reactjs', 'nodejs'],
     'database': ['mongodb', 'mysql'],
   }
-
-  const projects = [
-    {
-      name: 'discord 2.0',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ipsum molestias nisi asperiores distinctio sunt tenetur reprehenderit explicabo maiores, maxime tempore iure aperiam aspernatur deleniti repudiandae obcaecati. Laudantium, amet maxime!',
-      thumbnail: 'https://cdn2.unrealengine.com/what-is-discord-1920x1080-c3d90ca45f57.jpg'
-    },
-    {
-      name: 'whatsapp 2.0',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ipsum molestias nisi asperiores distinctio sunt tenetur reprehenderit explicabo maiores, maxime tempore iure aperiam aspernatur deleniti repudiandae obcaecati. Laudantium, amet maxime!',
-      thumbnail: 'https://cdn2.unrealengine.com/what-is-discord-1920x1080-c3d90ca45f57.jpg'
-    },
-    {
-      name: 'bussiness hosting',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ipsum molestias nisi asperiores distinctio sunt tenetur reprehenderit explicabo maiores, maxime tempore iure aperiam aspernatur deleniti repudiandae obcaecati. Laudantium, amet maxime!',
-      thumbnail: 'https://cdn2.unrealengine.com/what-is-discord-1920x1080-c3d90ca45f57.jpg'
-    }
-  ]
 
   return (
     <div className='body-container'>

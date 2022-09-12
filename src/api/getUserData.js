@@ -7,6 +7,7 @@
  */
 
 const githubuser = 'https://api.github.com/orgs/akashtrivedig-top-projects'
+const userprojects = 'https://api.github.com/orgs/akashtrivedig-top-projects/repos'
 
 const fetchJson = async (url) => {
   let response = await fetch(url, { method: 'GET' })
@@ -22,10 +23,21 @@ const getGithub = async () => {
   return response
 }
 
+const getProjects = async () => {
+  let response = await fetchJson(userprojects)
+  return response
+}
+
+
 export const getUserData = async () => {
-  let response = await getGithub()
-  console.log(response);
+  const response = await getGithub()
+  const response2 = await getProjects()
+  let projects = []
+  await response2.forEach((project) => {
+    projects.push({ name: project.name, description: project.description, thumbnail: `https://raw.githubusercontent.com/akashtrivedig-top-projects/${project.name}/main/thumbnails/thumbnail%201.jpg`, topics: project.topics })
+  })
   return {
-    'avatar': response.avatar_url
+    avatar: response.avatar_url,
+    projects: projects
   }
 }
