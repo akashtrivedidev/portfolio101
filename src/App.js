@@ -7,26 +7,11 @@ import "./App.css"
 
 function App() {
   const [user, setUser] = React.useState({
-    avatar: 'https://avatars.githubusercontent.com/u/56351314?v=4',
+    bio: '',
+    twitter: null,
+    avatar: null,
     projects: [
-      {
-        name: 'discord 2.0',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ipsum molestias nisi asperiores distinctio sunt tenetur reprehenderit explicabo maiores, maxime tempore iure aperiam aspernatur deleniti repudiandae obcaecati. Laudantium, amet maxime!',
-        thumbnail: 'https://cdn2.unrealengine.com/what-is-discord-1920x1080-c3d90ca45f57.jpg',
-        topics: []
-      },
-      {
-        name: 'whatsapp 2.0',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ipsum molestias nisi asperiores distinctio sunt tenetur reprehenderit explicabo maiores, maxime tempore iure aperiam aspernatur deleniti repudiandae obcaecati. Laudantium, amet maxime!',
-        thumbnail: 'https://cdn2.unrealengine.com/what-is-discord-1920x1080-c3d90ca45f57.jpg',
-        topics: []
-      },
-      {
-        name: 'bussiness hosting',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ipsum molestias nisi asperiores distinctio sunt tenetur reprehenderit explicabo maiores, maxime tempore iure aperiam aspernatur deleniti repudiandae obcaecati. Laudantium, amet maxime!',
-        thumbnail: 'https://cdn2.unrealengine.com/what-is-discord-1920x1080-c3d90ca45f57.jpg',
-        topics: []
-      }
+      { name: '', description: '', thumbnail: '', topics: [] }, { name: '', description: '', thumbnail: '', topics: [] }, { name: '', description: '', thumbnail: '', topics: [] }
     ]
   })
 
@@ -45,8 +30,8 @@ function App() {
   return (
     <React.Fragment>
       <Header avatar={user.avatar} />
-      <Body projects={user.projects} />
-      <Footer />
+      <Body projects={user.projects} avatar={user.avatar} bio={user.bio} />
+      <Footer twitter={user.twitter} />
     </React.Fragment>
   )
 }

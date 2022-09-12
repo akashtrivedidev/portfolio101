@@ -6,7 +6,16 @@ const Header = (props) => {
   const { avatar } = props
   const username = 'akash trivedi';
   const options = ['projects', 'skills', 'contact', 'open source']
-
+  if (!avatar) {
+    return (
+      <div className="empty-header">
+        <div className="empty-circle"></div>
+        <div className="empty-line-container">
+          <div className="empty-line"></div>
+        </div>
+      </div>
+    )
+  }
   return (
     <div className='header-container'>
       <header className='header'>
