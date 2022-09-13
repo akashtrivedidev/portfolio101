@@ -6,7 +6,6 @@
  * network-request: true
  */
 
-const githubuser = 'https://api.github.com/orgs/akashtrivedig-top-projects'
 const userprojects = 'https://api.github.com/orgs/akashtrivedig-top-projects/repos'
 const userbio = 'https://api.github.com/users/akashtrivedig'
 
@@ -19,10 +18,6 @@ const fetchJson = async (url) => {
   return response
 }
 
-const getGithub = async () => {
-  let response = await fetchJson(githubuser)
-  return response
-}
 
 const getProjects = async () => {
   let response = await fetchJson(userprojects)
@@ -36,17 +31,16 @@ const getBio = async () => {
 
 
 export const getUserData = async () => {
-  const response = await getGithub()
-  const response2 = await getProjects()
-  const response3 = await getBio()
+  const response_org = await getProjects()
+  const response_personal = await getBio()
   let projects = []
-  await response2.forEach((project) => {
+  await response_org.forEach((project) => {
     projects.push({ name: project.name, description: project.description, thumbnail: `https://raw.githubusercontent.com/akashtrivedig-top-projects/${project.name}/main/thumbnails/thumbnail%201.jpg`, topics: project.topics })
   })
   return {
-    bio: response3?.bio,
-    avatar: response.avatar_url,
+    bio: response_personal?.bio,
+    avatar: response_personal.avatar_url,
     projects: projects,
-    twitter: response3.twitter_username
+    twitter: response_personal.twitter_username
   }
 }
