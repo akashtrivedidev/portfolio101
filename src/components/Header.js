@@ -31,8 +31,8 @@ const Header = (props) => {
           </div>
           <div className="header-flag"><img src={flag_icon_rounded} className='flag' alt='indian flag' /></div>
         </div>
-      </header>
-    </div>
+      </header >
+    </div >
   );
 };
 

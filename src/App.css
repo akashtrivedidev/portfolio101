@@ -5,10 +5,12 @@
   --project-card-color: #f2f8fa;
   --project-card-hover-color: #c0c0c0;
   --project-about-color: #474747;
-  --tech-topic-color: #00456d;
+  --tech-topic-color: #005d6d;
   --tech-topic1-color: #187eb9;
   --footer-color: #212121;
   --footer-message-color: #ffffff;
+  --footer-social-color: #e9e9e9;
+  --social-color: #51bcff;
   --empty-color: #c5c5c5;
 }
 
@@ -20,7 +22,6 @@
 
 .flex-container {
   display: flex;
-  margin-bottom: .5em;
 }
 
 .header-link {
@@ -109,7 +110,7 @@
 
 .social {
   text-decoration: none;
-  color: #51bcff;
+  color: var(--footer-social-color);
 }
 
 /* body */
@@ -272,9 +273,6 @@
   margin-right: .5em;
 }
 
-
-
-
 .email-container {
   display: flex;
   flex-direction: column;
@@ -380,6 +378,10 @@
     padding: 1em;
     flex-wrap: wrap;
     margin: auto;
+  }
+
+  .flex-container {
+    margin-bottom: .5em;
   }
 
   .social-icon {
