@@ -10,7 +10,7 @@ const Project = (props) => {
   const project_code = useParams().project_id
 
   while (project_index < projects.length) {
-    if (projects[project_index].id == project_code) {
+    if (projects[project_index].id === Number(project_code)) {
       break
     }
     project_index++
@@ -20,7 +20,6 @@ const Project = (props) => {
 
   return (
     <React.Fragment>
-
       <div className='px-container'>
         <div className="px-thumbnail-container">
           <img src={projects.thumbnail} alt="" className="px-thumbnail" />
@@ -38,7 +37,7 @@ const Project = (props) => {
       </div>
       <section className='section-container'>
         <div className="section-heading-container">
-          <h2 className='heading'>skills</h2>
+          <h2 className='heading'>screenshots</h2>
           <img src={screenshot_icon} alt="projects" className='project-icon' />
         </div>
         <hr />
