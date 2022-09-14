@@ -1,6 +1,9 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 
+const project_icon = 'https://img.icons8.com/dotty/344/group-of-projects.png'
+const skill_icon = 'https://img.icons8.com/cotton/344/source-code--v4.png'
+
 const Body = (props) => {
   const { projects, avatar, bio } = props
   const intro_heading = 'myself'
@@ -10,6 +13,8 @@ const Body = (props) => {
     'libraries': ['reactjs', 'nodejs'],
     'database': ['mongodb', 'mysql'],
   }
+
+  const grid_style = { 'gridTemplateColumns': `repeat(${projects.length},auto)` }
 
   return (
     <div className='body-container'>
@@ -25,15 +30,21 @@ const Body = (props) => {
       </section>
 
       <section className='section-container' id='projects'>
-        <h2 className='heading'>personal projects</h2>
+        <div className="section-heading-container">
+          <h2 className='heading'>personal projects</h2>
+          <img src={project_icon} alt="projects" className='project-icon' />
+        </div>
         <hr />
-        <div className='slider-container'>
+        <div className='slider-container' style={grid_style}>
           {projects.map((project_object, index) => (<ProjectCard hasdata={avatar} project={project_object} key={index} />))}
         </div>
       </section>
 
       <section className='section-container' id='skills'>
-        <h2 className='heading'>skills</h2>
+        <div className="section-heading-container">
+          <h2 className='heading'>skills</h2>
+          <img src={skill_icon} alt="projects" className='project-icon' />
+        </div>
         <hr />
         <div className="skills-container">
           {Object.entries(skills).map((object, index) => (<SkillContainer hasdata={avatar} list={object} key={index} />))}
