@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const flag_icon_rounded = 'https://cdn-icons-png.flaticon.com/512/330/330439.png'
 
@@ -20,7 +21,9 @@ const Header = (props) => {
     <div className='header-container'>
       <header className='header'>
         <div className='header-icon-container'><img src={avatar} className='avatar' alt='avatar' /></div>
-        <div className='header-app-name-container'><div className='header-app-name'>{username}</div></div>
+        <div className='header-app-name-container'>
+          <NavLink className='link' to={'/'}><div className='header-app-name'>{username}</div></NavLink>
+        </div>
         <div className='header-option-container'>
           <div className='header-option'>
             {
