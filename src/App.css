@@ -186,6 +186,7 @@
 
 .projection-about-container {
   color: var(--project-about-color);
+  font-size: .9rem;
   word-spacing: 5px;
   max-height: 25em;
   padding: 1em;

@@ -35,7 +35,7 @@ export const getUserData = async () => {
   const response_personal = await getBio()
   let projects = []
   await response_org.forEach((project) => {
-    projects.push({ name: project.name, description: project.description, thumbnail: `https://raw.githubusercontent.com/akashtrivedig-top-projects/${project.name}/main/thumbnails/thumbnail%201.jpg`, topics: project.topics })
+    projects.push({ name: project.name, description: project.description, thumbnail: `https://raw.githubusercontent.com/akashtrivedig-top-projects/${project.name}/main/thumbnails/thumbnail%201.png`, topics: project.topics })
   })
   return {
     bio: response_personal?.bio,
