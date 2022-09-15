@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import TechTopic from './TechTopic'
 
 const screenshot_icon = 'https://img.icons8.com/cotton/344/gallery.png'
+const link_icon = 'https://cdn-icons-png.flaticon.com/512/659/659999.png'
 
 const Project = (props) => {
   let project_index = 0
@@ -25,7 +26,19 @@ const Project = (props) => {
           <img src={projects.thumbnail} alt="" className="px-thumbnail" />
         </div>
         <div className="px-about-container">
-          <h3 className="px-name">{projects.name}</h3>
+          <div className="px-name-container">
+            <img src={link_icon} alt="" className='project-icon' />
+            {
+              projects.homepage === "" ?
+                (<h3 className="px-name">{projects.name}</h3>) :
+                (
+                  <React.Fragment>
+                    <a href={projects.homepage} className='link'><h3 className="px-name">{projects.name}</h3></a>
+                  </React.Fragment>
+                )
+            }
+
+          </div>
           <hr />
           <div className="px-description">{projects.description}</div>
           <div className="px-topic-container">
