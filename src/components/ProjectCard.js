@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import TechTopic from './TechTopic'
 
 const ProjectCard = (props) => {
@@ -22,7 +22,7 @@ const ProjectCard = (props) => {
   }
   return (
     <div className='project-card-container'>
-      <NavLink to={`/${id}`} className='link'>
+      <Link to={`/${id}`} className='link'>
         <div className="project-thumbnail-container">
           <img src={thumbnail} alt="" className="project-thumbnail" />
         </div>
@@ -36,7 +36,7 @@ const ProjectCard = (props) => {
             }
           </div>
         </div>
-      </NavLink>
+      </Link>
     </div>
   )
 }
