@@ -10,6 +10,7 @@ const Body = (props) => {
   const skills = {
     'programming languages': ['Java', 'Javascript', 'python'],
     'frameworks': ['express', 'django'],
+    'Api\'s': ['Graphql', 'REST'],
     'libraries': ['reactjs', 'nodejs'],
     'database': ['mongodb', 'mysql'],
   }
