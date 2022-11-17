@@ -4,7 +4,6 @@ import Body from "./components/Body"
 import Project from "./components/Project"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Container from "./components/Container"
-import "./App.css"
 
 function App() {
   const [user, setUser] = React.useState({

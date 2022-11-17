@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom'
 const Container = (props) => {
   const { user } = props
   return (
-    <div className='homepage-container'>
+    <div className=''>
       <Header avatar={user.avatar} />
       <Outlet />
       <Footer twitter={user.twitter} />

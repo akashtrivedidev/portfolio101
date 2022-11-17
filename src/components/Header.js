@@ -9,33 +9,39 @@ const Header = (props) => {
   const options = ['projects', 'skills', 'contact', 'open source']
   if (!avatar) {
     return (
-      <div className="empty-header">
-        <div className="empty-circle"></div>
-        <div className="empty-line-container">
-          <div className="empty-line"></div>
+      <div className="">
+        <div className=""></div>
+        <div className="">
+          <div className=""></div>
         </div>
       </div>
     )
   }
   return (
-    <div className='header-container'>
-      <header className='header'>
-        <div className='header-icon-container'><img src={avatar} className='avatar' alt='avatar' /></div>
-        <div className='header-app-name-container'>
-          <NavLink className='link' to={'/'}><div className='header-app-name'>{username}</div></NavLink>
+    <div className=''>
+      <header className=''>
+        <div className=''>
+          <img src={avatar} className='w-12 rounded-xl aspect-square' alt='avatar' />
         </div>
-        <div className='header-option-container'>
-          <div className='header-option'>
+        <div className=''>
+          <NavLink className='' to={'/'}>
+            <div className=''>{username}</div>
+          </NavLink>
+        </div>
+        <div className=''>
+          <div className=''>
             {
               options.map((option, index) => (
-                <a className='header-link' href={`/#${option}`}>{option}</a>
+                <a className='' href={`/#${option}`}>{option}</a>
               ))
             }
           </div>
-          <div className="header-flag"><img src={flag_icon_rounded} className='flag' alt='indian flag' /></div>
+          <div className="">
+            <img src={flag_icon_rounded} className='' alt='indian flag' />
+          </div>
         </div>
-      </header >
-    </div >
+      </header>
+    </div>
   );
 };
 

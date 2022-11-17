@@ -18,36 +18,35 @@ const Body = (props) => {
   const grid_style = { 'gridTemplateColumns': `repeat(${projects.length},auto)` }
 
   return (
-    <div className='body-container'>
-
-      <section className='intro-section-container'>
-        <h1 className='heading'>{intro_heading}</h1>
-        {avatar ? (<p className='intro-paragraph'>{bio}</p>) : (
+    <div className=''>
+      <section className=''>
+        <h1 className=''>{intro_heading}</h1>
+        {avatar ? (<p className=''>{bio}</p>) : (
           <React.Fragment>
-            <div className="empty-line"></div>
-            <div className="empty-line"></div>
+            <div className=""></div>
+            <div className=""></div>
           </React.Fragment>
         )}
       </section>
 
-      <section className='section-container' id='projects'>
-        <div className="section-heading-container">
-          <h2 className='heading'>personal projects</h2>
-          <img src={project_icon} alt="projects" className='project-icon' />
+      <section className='' id='projects'>
+        <div className="">
+          <h2 className=''>personal projects</h2>
+          <img src={project_icon} alt="projects" className='' />
         </div>
         <hr />
-        <div className='slider-container' style={grid_style}>
+        <div className='' style={grid_style}>
           {projects.map((project_object, index) => (<ProjectCard hasdata={avatar} project={project_object} key={index} />))}
         </div>
       </section>
 
-      <section className='section-container' id='skills'>
-        <div className="section-heading-container">
-          <h2 className='heading'>skills</h2>
-          <img src={skill_icon} alt="projects" className='project-icon' />
+      <section className='' id='skills'>
+        <div className="">
+          <h2 className=''>skills</h2>
+          <img src={skill_icon} alt="projects" className='' />
         </div>
         <hr />
-        <div className="skills-container">
+        <div className="">
           {Object.entries(skills).map((object, index) => (<SkillContainer hasdata={avatar} list={object} key={index} />))}
         </div>
       </section>
@@ -61,22 +60,22 @@ const SkillContainer = (props) => {
   const { list, hasdata } = props
   if (!hasdata) {
     return (
-      <div className='skill-container'>
-        <div className='empty-line'></div>
-        <div className="skill-list">
-          <div className='empty-line'></div>
-          <div className='empty-line'></div>
-          <div className='empty-line'></div>
+      <div className=''>
+        <div className=''></div>
+        <div className="">
+          <div className=''></div>
+          <div className=''></div>
+          <div className=''></div>
         </div>
       </div>
     )
   }
   return (
-    <div className='skill-container'>
-      <h2 className='skill-heading'>{list[0]}</h2>
-      <div className="skill-list">
+    <div className=''>
+      <h2 className=''>{list[0]}</h2>
+      <div className="">
         <ul>
-          {list[1].map((skill, index) => (<li className='skill'>{skill}</li>))}
+          {list[1].map((skill, index) => (<li className=''>{skill}</li>))}
         </ul>
       </div>
     </div>

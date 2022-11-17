@@ -10,27 +10,27 @@ const ProjectCard = (props) => {
 
   if (!hasdata) {
     return (
-      <div className='project-card-container'>
-        <div className="project-thumbnail-container">
-          <div className="empty-project-thumbnail"></div>
+      <div className=''>
+        <div className="">
+          <div className=""></div>
         </div>
-        <div className="projection-about-container">
-          <div className="empty-line"></div>
+        <div className="">
+          <div className=""></div>
         </div>
       </div>
     )
   }
   return (
-    <div className='project-card-container'>
-      <Link to={`/${id}`} className='link'>
-        <div className="project-thumbnail-container">
-          <img src={thumbnail} alt="" className="project-thumbnail" />
+    <div className=''>
+      <Link to={`/${id}`} className=''>
+        <div className="">
+          <img src={thumbnail} alt="" className="" />
         </div>
-        <div className="projection-about-container">
-          <h3 className="project-name">{project_name}</h3>
+        <div className="">
+          <h3 className="">{project_name}</h3>
           <hr />
-          <div className="project-description">{description}</div>
-          <div className="project-topic-container">
+          <div className="">{description}</div>
+          <div className="">
             {
               topics.map((topic, index) => (<TechTopic name={topic} />))
             }

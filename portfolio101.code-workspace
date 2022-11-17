@@ -5,10 +5,10 @@
 		}
 	],
 	"settings": {
-		"workbench.colorTheme": "Default Dark+",
+		"workbench.colorTheme": "GitHub Dark Default",
 		
 		"editor.minimap.autohide": true,
-		"editor.fontFamily": "Hack",
+		"editor.fontFamily": "Fira Code",
 		"editor.tabSize": 2,
 		"editor.fontSize": 16,
 		"editor.lineHeight": 1.8,
@@ -16,7 +16,7 @@
 		"editor.formatOnSave": true,
 		"editor.glyphMargin": false,
 
-		"terminal.integrated.fontFamily": "Hack",
+		"terminal.integrated.fontFamily": "Fira Code",
 		"terminal.integrated.fontSize": 16,
 		"terminal.integrated.cursorStyle": "line",
 		"[css]": {

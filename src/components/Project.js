@@ -21,37 +21,39 @@ const Project = (props) => {
 
   return (
     <React.Fragment>
-      <div className='px-container'>
-        <div className="px-thumbnail-container">
-          <img src={projects.thumbnail} alt="" className="px-thumbnail" />
+      <div className=''>
+        <div className="">
+          <img src={projects.thumbnail} alt="" className="" />
         </div>
-        <div className="px-about-container">
-          <div className="px-name-container">
-            <img src={link_icon} alt="" className='project-icon' />
+        <div className="">
+          <div className="">
+            <img src={link_icon} alt="" className='' />
             {
               projects.homepage === "" ?
-                (<h3 className="px-name">{projects.name}</h3>) :
+                (<h3 className="">{projects.name}</h3>) :
                 (
                   <React.Fragment>
-                    <a href={projects.homepage} className='link'><h3 className="px-name">{projects.name}</h3></a>
+                    <a href={projects.homepage} className=''>
+                      <h3 className="">{projects.name}</h3>
+                    </a>
                   </React.Fragment>
                 )
             }
 
           </div>
           <hr />
-          <div className="px-description">{projects.description}</div>
-          <div className="px-topic-container">
+          <div className="">{projects.description}</div>
+          <div className="">
             {
               projects.topics.map((topic, index) => (<TechTopic name={topic} />))
             }
           </div>
         </div>
       </div>
-      <section className='section-container'>
-        <div className="section-heading-container">
-          <h2 className='heading'>screenshots</h2>
-          <img src={screenshot_icon} alt="projects" className='project-icon' />
+      <section className=''>
+        <div className="">
+          <h2 className=''>screenshots</h2>
+          <img src={screenshot_icon} alt="projects" className='' />
         </div>
         <hr />
       </section>
